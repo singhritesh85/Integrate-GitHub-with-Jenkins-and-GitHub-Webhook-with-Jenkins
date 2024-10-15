@@ -12,7 +12,7 @@ For this to achieve you must install two pluging **GitHub** and **Git** in Jenki
 To achieve this Go to **Manage Jenkins > System** then GitHub Servers and do the configuration as shown in the screenshot attached below.
 
 ![image](https://github.com/user-attachments/assets/e44ae6ce-6361-4e1e-97cb-af696b00ff43)
-![image](https://github.com/user-attachments/assets/21459b3c-af93-46e5-a3f0-af4ebd2d00d7)
+![image](https://github.com/user-attachments/assets/20d5812c-b213-4a70-a03d-a855b260ad46)
 
 Go to User's **Setting > SSH and GPG Keys** and provide SSH Public Key here as shown in the screenshot attached below.
 
