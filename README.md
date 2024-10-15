@@ -74,12 +74,40 @@ Created Jenkins credential with username and password as shown in the screenshot
 Create Jenkins Job as shown in the screenshot attached below with webhook.
 
 ![image](https://github.com/user-attachments/assets/bd545f68-ef44-47fd-9143-7b5893b49033)
-![image](https://github.com/user-attachments/assets/9ed97ed6-7747-4b9a-ad21-870daf6067ac)
+
+```
+pipeline{
+    agent{
+        node{
+            label "Slave-1"
+            customWorkspace "/home/jenkins/demo"
+        }
+    }
+    stages{
+        stage("clone-code"){
+            steps{
+                cleanWs()
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/singhritesh85/hello-world2.git']])
+            }
+        }
+    }
+}
+```
 
 Configuration in GitHub Repository setting is as shown in the screenshot attached below.
 
 ![image](https://github.com/user-attachments/assets/90e4cfd6-f7c8-4e86-8380-bcd88b386e7f)
 ![image](https://github.com/user-attachments/assets/2a003b37-0d4d-4220-afd3-55204ec49967)
+![image](https://github.com/user-attachments/assets/a973969f-975c-477d-88b8-bee1d2c84d35)
+
+I did some changes in Dockerfile and webhook triggered as shown in the screenshot attached below and Jenkins Job ran successfully. 
+
+![image](https://github.com/user-attachments/assets/32b5dcb6-ca3e-4db7-8dc7-3ca8884797be)
+![image](https://github.com/user-attachments/assets/91f08fd2-0970-4f1e-aab9-def8cc59419b)
+
+The source code is present in GitHub Private Repo as shown in the screenshot attached below.
+
+![image](https://github.com/user-attachments/assets/5f8d2760-4781-4f72-9c73-f4810f6a4f89)
 
 
 
