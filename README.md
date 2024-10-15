@@ -63,4 +63,25 @@ pipeline{
 }
 ```
 
+Finally while running the Jenkins Job I provided Commit ID and Jenkins Job ran successfully.
+
+### 2. Integrating GitHub with Jenkins Using Personal Access Token.
+
+Created Jenkins credential with username and password as shown in the screenshot attached below. For username provide the username for GitHub and Password as Personal Access Token (PAT).
+
+![image](https://github.com/user-attachments/assets/c594f715-f531-4870-8edd-05cbd6670c80)
+
+Create Jenkins Job as shown in the screenshot attached below with webhook.
+
+![image](https://github.com/user-attachments/assets/bd545f68-ef44-47fd-9143-7b5893b49033)
+![image](https://github.com/user-attachments/assets/9ed97ed6-7747-4b9a-ad21-870daf6067ac)
+
+Configuration in GitHub Repository setting is as shown in the screenshot attached below.
+
+![image](https://github.com/user-attachments/assets/90e4cfd6-f7c8-4e86-8380-bcd88b386e7f)
+![image](https://github.com/user-attachments/assets/2a003b37-0d4d-4220-afd3-55204ec49967)
+
+
+
+
 
